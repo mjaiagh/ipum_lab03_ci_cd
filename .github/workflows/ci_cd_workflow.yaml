@@ -41,6 +41,9 @@ jobs:
          - name: Run PyTest
            run: uv run pytest tests
 
+         - name: Print result
+           run: echo " result ${{ needs.integration.result }}"
+
 
 
    deployment:
