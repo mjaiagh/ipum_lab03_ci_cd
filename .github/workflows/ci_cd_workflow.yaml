@@ -47,3 +47,6 @@ jobs:
 
         - name: Export to Onyx
           run: uv run python main.py --script=export
+
+        - name: Deployment
+          run: docker build -t polish-sentiment-app-onnx:latest .
