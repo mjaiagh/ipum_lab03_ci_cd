@@ -43,7 +43,7 @@ jobs:
           run: uv sync --group deployment
 
         - name: Download model
-          run: PYTHONPATH=src v run python src/scripts/download_artifacts.py
+          run: uv run python main.py --script=download
 
         - name: Export to Onyx
-          run: PYTHONPATH=src uv run python src/scripts/export_model_to_onnx.py
+          run: uv run python main.py --script=export
