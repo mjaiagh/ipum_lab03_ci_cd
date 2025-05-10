@@ -49,6 +49,7 @@ jobs:
    deployment:
       name: continuous-integration
       runs-on: ubuntu-latest
+      needs: integration
       if: ${{ inputs.steps == 'all' && needs.integration.result == 'success' }}
       steps:
         - name: Checkout code repo
