@@ -43,7 +43,7 @@ jobs:
           run: uv sync --group deployment
 
         - name: Download model
-          run: uv run python src/cripts/download_artifacts.py
+          run: uv run python src/scripts/download_artifacts.py
 
         - name: Export to Onyx
           run: uv run python src/scripts/export_model_to_onnx.py
